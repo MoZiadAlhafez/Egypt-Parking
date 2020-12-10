@@ -28,6 +28,10 @@
           transform: translateY(-50%);
 }
 
+.text-primary {
+  color: #0078d4;
+}
+
 .dropdown-item {
   -webkit-transition: .2s;
   transition: .2s;
@@ -302,7 +306,6 @@
 
 .our-product-hero-img {
   width: 100vw;
-  height: 79vh;
   background-size: cover;
 }
 
@@ -319,13 +322,20 @@
 
 .img-par {
   color: dimgray;
-  line-height: 35px;
-  font-weight: 600;
+  line-height: 1.7;
 }
 
 .img-sub-par {
   color: darkgray;
-  padding-left: 10px;
+  padding-left: 70px;
+}
+
+div.products-block {
+  margin: 20px 0;
+}
+
+div.products-block img {
+  width: 100%;
 }
 
 body {

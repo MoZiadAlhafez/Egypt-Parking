@@ -21,8 +21,9 @@ Gulp.task("pug", () => {
         .pipe(Pug({
             pretty: true
         }))
-        .pipe(Gulp.dest("dist/pages"))
+        .pipe(Gulp.dest("docs/pages"))
 })
+
 
 
 
@@ -35,7 +36,7 @@ Gulp.task("sass", function () {
         }))
         .pipe(prefix("last 2 versions"))
         .pipe(sourcemaps.write("."))
-        .pipe(Gulp.dest("dist/assets/css"))
+        .pipe(Gulp.dest("docs/assets/css"))
 });
 
 // JavaScript Task For Every Organization
@@ -46,7 +47,7 @@ Gulp.task("js", function () {
         // .pipe(concat("scripts.js"))
         // .pipe(uglify())
         .pipe(sourcemaps.write("."))
-        .pipe(Gulp.dest("dist/assets/js"))
+        .pipe(Gulp.dest("docs/assets/js"))
 
 });
 
@@ -55,13 +56,13 @@ Gulp.task("imagesminify", function () {
     return Gulp
         .src("./src/assets/images/**/*")
         .pipe(imagemin())
-        .pipe(Gulp.dest("dist/assets/images"))
+        .pipe(Gulp.dest("docs/assets/images"))
 });
 
 
 // Compress Task
 Gulp.task("compress", function () {
-    return Gulp.src("dist/**/*.*").pipe(zip("theme.zip")).pipe(Gulp.dest("."));
+    return Gulp.src("docs/**/*.*").pipe(zip("theme.zip")).pipe(Gulp.dest("."));
 });
 
 Gulp.task("watch", () => {
@@ -71,5 +72,5 @@ Gulp.task("watch", () => {
     Gulp.watch("./src/assets/styles/sass/**/*.scss", Gulp.series("sass"));
     Gulp.watch("./src/assets/js/**/*.js", Gulp.series("js"));
     Gulp.watch("./src/assets/images/**/*", Gulp.series("imagesminify"));
-    // Gulp.watch("dist/**/*.*", Gulp.series("compress"));
+    // Gulp.watch("docs/**/*.*", Gulp.series("compress"));
 })
