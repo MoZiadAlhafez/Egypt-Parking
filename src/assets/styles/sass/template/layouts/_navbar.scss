@@ -1,0 +1,43 @@
+// .navbar.bg-primary {
+//   background-color: #0078d4 !important;
+// }
+
+
+.dropdown-item {
+  transition: .2s;
+
+  &:hover {
+    background-color: #dfdfdf;
+    color: #1a1a1a;
+  }
+}
+
+
+.navbar-brand {
+  img {
+    width: 80px;
+
+  }
+}
+
+.banar {
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+}
+
+.service-block {
+  margin: 40px 0;
+
+  h4 {
+    color: #0078d4;
+  }
+
+  img {
+    width: 100%;
+  }
+}
