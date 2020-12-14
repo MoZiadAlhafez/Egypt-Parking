@@ -6,17 +6,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
 @import "./sass/template/components/beliefscards";
 @import "./sass/BassantStyles/ourproducts.scss";
+@import "./sass/BassantStyles/index.scss";
 
-$BoxesColors: "one"#28c7fa,
-"two"#775ada,
-"three"#002651,
-"four"#ff304f;
+$BoxesColors: "one"#28c7fa, "two"#775ada, "three"#002651, "four"#ff304f;
 
 body {
 	text-transform: capitalize;
 	font-family: 'Cairo', sans-serif;
 	overflow-x: hidden;
 	padding-top: 50px;
+}
+
+/* Home */
+.img-header {
+	color: #0078d4;
+}
+
+.img-paragraph {
+	font-size: 15px;
+	line-height: 2;
+}
+
+.paragraph-sub-header {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.footer-wrapper {
+	width: 100%;
+	height: auto;
+	background-color: gainsboro;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-header {
+	color: #000;
+	text-align: center;
+	padding-top: 10rem;
+	font-weight: bolder;
+}
+
+.footer-paragraph {
+	width: 30rem;
+	text-align: center;
+	line-height: 2;
+}
+
+/* End of Home */
+
+.main-header {
+	text-align: center;
+	color: #0078d4;
 }
 
 .about {
@@ -97,8 +144,7 @@ body {
 		}
 	}
 
-	@each $name,
-	$color in $BoxesColors {
+	@each $name, $color in $BoxesColors {
 		.statis.#{$name} {
 			i {
 				background-color: $color;
@@ -143,7 +189,7 @@ body {
 			//     }
 			// }
 
-			>i {
+			> i {
 				font-size: 24px;
 			}
 		}
@@ -172,7 +218,7 @@ body {
 				height: 150px;
 			}
 
-			>i {
+			> i {
 				font-size: 16px;
 			}
 		}
@@ -185,7 +231,7 @@ body {
 				height: 300px;
 			}
 
-			>i {
+			> i {
 				font-size: 24px;
 			}
 
